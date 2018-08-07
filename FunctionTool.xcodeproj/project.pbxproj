@@ -18,6 +18,7 @@
 		1D19A4092117F56700900E3A /* MusicWordsAninationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A4082117F56700900E3A /* MusicWordsAninationViewController.m */; };
 		1D19A4102117F6EB00900E3A /* PinyinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A40F2117F6EB00900E3A /* PinyinViewController.m */; };
 		1D19A4122117F70900900E3A /* pinyin.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A4112117F70800900E3A /* pinyin.plist */; };
+		1D19A41821197F1200900E3A /* CAReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		1D19A40E2117F6EB00900E3A /* PinyinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinViewController.h; sourceTree = "<group>"; };
 		1D19A40F2117F6EB00900E3A /* PinyinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinViewController.m; sourceTree = "<group>"; };
 		1D19A4112117F70800900E3A /* pinyin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pinyin.plist; sourceTree = "<group>"; };
+		1D19A41621197F1200900E3A /* CAReplicatorLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerViewController.h; sourceTree = "<group>"; };
+		1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 				1D19A4072117F56700900E3A /* MusicWordsAninationViewController.h */,
 				1D19A4082117F56700900E3A /* MusicWordsAninationViewController.m */,
 				1D19A40D2117F6EB00900E3A /* Pinyin */,
+				1D19A41621197F1200900E3A /* CAReplicatorLayerViewController.h */,
+				1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				1D19A4102117F6EB00900E3A /* PinyinViewController.m in Sources */,
 				1D19A4092117F56700900E3A /* MusicWordsAninationViewController.m in Sources */,
 				1D19A3D62117F3F100900E3A /* AppDelegate.m in Sources */,
+				1D19A41821197F1200900E3A /* CAReplicatorLayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
