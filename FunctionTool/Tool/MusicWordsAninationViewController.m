@@ -16,17 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
-    
-    UILabel *backLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 300, 40)];
-    backLabel.textColor = [UIColor redColor];
-    backLabel.font = [UIFont systemFontOfSize:30];
-    backLabel.text = @"原来你也在这里";
-    backLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:backLabel];
+    [self firstMethod];
+    [self secondMethod];
+}
+
+- (void)firstMethod
+{
+    UILabel *backgroundView = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 300, 40)];
+    backgroundView.textColor = [UIColor redColor];
+    backgroundView.font = [UIFont systemFontOfSize:30];
+    backgroundView.text = @"原来你也在这里";
+    backgroundView.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:backgroundView];
     
     UILabel *foreLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 300, 40)];
-    foreLabel.textColor = [UIColor whiteColor];
+    foreLabel.textColor = [UIColor greenColor];
     foreLabel.text = @"原来你也在这里";
     foreLabel.font = [UIFont systemFontOfSize:30];
     foreLabel.textAlignment = NSTextAlignmentCenter;
@@ -57,7 +63,49 @@
     basicAnimation.removedOnCompletion = NO;
     basicAnimation.fillMode = kCAFillModeForwards;
     [foreLabel.layer.mask addAnimation:basicAnimation forKey:nil];
+}
+
+- (void)secondMethod
+{
+    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 300, 40)];
+    [self.view addSubview:backgroundView];
     
+    CALayer *trackLayer = [CALayer layer];
+    trackLayer.bounds = backgroundView.bounds;
+    trackLayer.position = CGPointMake(backgroundView.bounds.size.width / 2.0, backgroundView.bounds.size.height / 2.0);
+    trackLayer.backgroundColor = [UIColor greenColor].CGColor;
+    [backgroundView.layer addSublayer:trackLayer];
+    
+    CAShapeLayer *backLayer = [CAShapeLayer layer];
+    backLayer.bounds = backgroundView.bounds;
+    UIBezierPath * path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, backgroundView.bounds.size.height / 2.0)];
+    [path addLineToPoint:CGPointMake(backgroundView.bounds.size.width, backgroundView.bounds.size.height / 2.0)];
+    backLayer.path = path.CGPath;
+    backLayer.position = CGPointMake(backgroundView.bounds.size.width / 2.0, backgroundView.bounds.size.height / 2.0);
+    backLayer.lineWidth = backgroundView.bounds.size.height;
+    backLayer.strokeColor = [UIColor redColor].CGColor;
+    backLayer.strokeEnd = 0;
+    [trackLayer addSublayer:backLayer];
+    
+    CATextLayer *textLayer = [CATextLayer layer];
+    textLayer.bounds = backgroundView.bounds;
+    textLayer.position = CGPointMake(backgroundView.bounds.size.width / 2.0, backgroundView.bounds.size.height / 2.0);
+    textLayer.string = @"原来你也在这里";
+    textLayer.foregroundColor = [UIColor blackColor].CGColor;
+    textLayer.wrapped = YES;
+    textLayer.truncationMode = kCATruncationEnd;
+    textLayer.font = CFBridgingRetain([UIFont systemFontOfSize:30].fontName);
+    textLayer.fontSize = [UIFont systemFontOfSize:30].pointSize;
+    textLayer.alignmentMode = kCAAlignmentCenter;
+    trackLayer.mask = textLayer;
+    
+    CABasicAnimation *animation2 = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation2.duration = 2;
+    animation2.repeatCount = MAXFLOAT;
+    animation2.fromValue = @(0);
+    animation2.toValue = @(1);
+    [backLayer addAnimation:animation2 forKey:@"key"];
 }
 
 - (void)didReceiveMemoryWarning {
