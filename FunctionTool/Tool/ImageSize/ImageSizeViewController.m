@@ -24,6 +24,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    self.title = @"变更图片size";
+    
     UIImage *image = [UIImage imageNamed:@"ttttt"]; //
     
     CGSize smallSize = CGSizeMake(image.size.width/2, image.size.height/2);

@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"两种实现方式";
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
     [self firstMethod];
