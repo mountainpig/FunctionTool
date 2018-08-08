@@ -10,6 +10,7 @@
 #import "MusicWordsAninationViewController.h"
 #import "PinyinViewController.h"
 #import "CAReplicatorLayerViewController.h"
+#import "ImageSizeViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -23,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _listArray = @[@"musicWordsAanimation",@"pinyin",@"CAReplicatorLayer"];
+    _listArray = @[@"musicWordsAanimation",@"pinyin",@"CAReplicatorLayer",@"imageSize"];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.delegate = self;
@@ -58,6 +59,9 @@
             break;
         case 2:
             [self.navigationController pushViewController:CAReplicatorLayerViewController.new animated:YES];
+            break;
+        case 3:
+            [self.navigationController pushViewController:ImageSizeViewController.new animated:YES];
             break;
             
         default:

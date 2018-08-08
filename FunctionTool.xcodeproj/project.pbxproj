@@ -19,6 +19,10 @@
 		1D19A4102117F6EB00900E3A /* PinyinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A40F2117F6EB00900E3A /* PinyinViewController.m */; };
 		1D19A4122117F70900900E3A /* pinyin.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A4112117F70800900E3A /* pinyin.plist */; };
 		1D19A41821197F1200900E3A /* CAReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */; };
+		1D19A429211AFBDB00900E3A /* ImageSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A426211AFBDB00900E3A /* ImageSizeViewController.m */; };
+		1D19A42A211AFBDB00900E3A /* jpeg_size.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A427211AFBDB00900E3A /* jpeg_size.png */; };
+		1D19A42B211AFBDB00900E3A /* png_size.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A428211AFBDB00900E3A /* png_size.png */; };
+		1D19A42F211AFD0200900E3A /* ttttt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A42E211AFD0200900E3A /* ttttt.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,11 @@
 		1D19A4112117F70800900E3A /* pinyin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pinyin.plist; sourceTree = "<group>"; };
 		1D19A41621197F1200900E3A /* CAReplicatorLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerViewController.h; sourceTree = "<group>"; };
 		1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerViewController.m; sourceTree = "<group>"; };
+		1D19A425211AFBDB00900E3A /* ImageSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSizeViewController.h; sourceTree = "<group>"; };
+		1D19A426211AFBDB00900E3A /* ImageSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSizeViewController.m; sourceTree = "<group>"; };
+		1D19A427211AFBDB00900E3A /* jpeg_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jpeg_size.png; sourceTree = "<group>"; };
+		1D19A428211AFBDB00900E3A /* png_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png_size.png; sourceTree = "<group>"; };
+		1D19A42E211AFD0200900E3A /* ttttt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ttttt.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +161,7 @@
 				1D19A40D2117F6EB00900E3A /* Pinyin */,
 				1D19A41621197F1200900E3A /* CAReplicatorLayerViewController.h */,
 				1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */,
+				1D19A424211AFBDB00900E3A /* ImageSize */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -164,6 +174,18 @@
 				1D19A40F2117F6EB00900E3A /* PinyinViewController.m */,
 			);
 			path = Pinyin;
+			sourceTree = "<group>";
+		};
+		1D19A424211AFBDB00900E3A /* ImageSize */ = {
+			isa = PBXGroup;
+			children = (
+				1D19A425211AFBDB00900E3A /* ImageSizeViewController.h */,
+				1D19A426211AFBDB00900E3A /* ImageSizeViewController.m */,
+				1D19A427211AFBDB00900E3A /* jpeg_size.png */,
+				1D19A428211AFBDB00900E3A /* png_size.png */,
+				1D19A42E211AFD0200900E3A /* ttttt.png */,
+			);
+			path = ImageSize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +291,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D19A42F211AFD0200900E3A /* ttttt.png in Resources */,
 				1D19A3E12117F3F200900E3A /* LaunchScreen.storyboard in Resources */,
+				1D19A42A211AFBDB00900E3A /* jpeg_size.png in Resources */,
+				1D19A42B211AFBDB00900E3A /* png_size.png in Resources */,
 				1D19A4122117F70900900E3A /* pinyin.plist in Resources */,
 				1D19A3DE2117F3F200900E3A /* Assets.xcassets in Resources */,
 				1D19A3DC2117F3F100900E3A /* Main.storyboard in Resources */,
@@ -299,6 +324,7 @@
 			files = (
 				1D19A3D92117F3F100900E3A /* ViewController.m in Sources */,
 				1D19A3E42117F3F200900E3A /* main.m in Sources */,
+				1D19A429211AFBDB00900E3A /* ImageSizeViewController.m in Sources */,
 				1D19A4102117F6EB00900E3A /* PinyinViewController.m in Sources */,
 				1D19A4092117F56700900E3A /* MusicWordsAninationViewController.m in Sources */,
 				1D19A3D62117F3F100900E3A /* AppDelegate.m in Sources */,
