@@ -47,6 +47,16 @@
 
     UIImage *vImage = [self vImage:image size:smallSize];
     [self imageWithRect:CGRectMake(10, 84 + 180, 180, 180)].image = vImage;
+    
+    /*
+     Core Image表现最差。Core Graphics 和 Image I/O最好。实际上，在苹果官方在 Performance Best Practices section of the Core Image Programming Guide 部分中特别推荐使用Core Graphics或Image I / O功能预先裁剪或缩小图像。
+     
+     其实微信最早是使用UIKit，后来改使用ImageIO。
+     
+     UIKit处理大分辨率图片时，往往容易出现OOM，原因是-[UIImage drawInRect:]在绘制时，先解码图片，再生成原始分辨率大小的bitmap，这是很耗内存的。解决方法是使用更低层的ImageIO接口，避免中间bitmap产生。
+     
+     所以最后我比较建议和微信一样使用ImageIO。
+     */
 
 }
 
@@ -80,7 +90,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-//UIKit
+//UIKit 这种方式最简单，效果也不错，但我不太建议使用这种方式
 - (UIImage *)uikitImage:(UIImage *)image size:(CGSize)size
 {
     UIGraphicsBeginImageContextWithOptions(size, YES, 1);
@@ -91,6 +101,10 @@
 }
 
 //CoreGraphics
+/*
+ CoreGraphics / Quartz 2D提供了一套较低级别的API，允许进行更高级的配置。 给定一个CGImage，使用临时位图上下文来渲染缩放后的图像。
+ 使用CoreGraphics图像的质量与UIKit图像相同。 至少我无法察觉到任何区别，并且imagediff也没有任何区别。 表演只有不同之处。
+ */
 - (UIImage *)coreGraphicsImage:(UIImage *)image size:(CGSize)size
 {
     CGImageRef ref = [image CGImage];
@@ -107,6 +121,10 @@
 }
 
 //ImageIO
+/*
+ Image I / O是一个功能强大但鲜为人知的用于处理图像的框架。 独立于Core Graphics，它可以在许多不同格式之间读取和写入，访问照片元数据以及执行常见的图像处理操作。
+ 这个库提供了该平台上最快的图像编码器和解码器，具有先进的缓存机制，甚至可以逐步加载图像。
+ */
 - (UIImage *)imageIOImage:(UIImage *)image size:(CGSize)size
 {
     NSData *data = UIImagePNGRepresentation(image);
@@ -122,6 +140,10 @@
 }
 
 //CoreImage
+/*
+ CoreImage是IOS5中新加入的一个Objective-c的框架，里面提供了强大高效的图像处理功能，用来对基于像素的图像进行操作与分析。IOS提供了很多强大的滤镜(Filter)，这些Filter提供了各种各样的效果，并且还可以通过滤镜链将各种效果的Filter叠加起来，形成强大的自定义效果，如果你对该效果不满意，还可以子类化滤镜。
+
+ */
 - (UIImage *)coreImage:(UIImage *)image size:(CGSize)size
 {
     CGImageRef ref = [image CGImage];
@@ -143,6 +165,11 @@
 }
 
 //vImage
+/*
+ 使用时需要 import Accelerate
+使用CPU的矢量处理器处理大图像。 强大的图像处理功能，包括Core Graphics和Core Video互操作，格式转换和图像处理。
+ 这个不是很流行并且文档很少的小框架却十分强大。 结果令人惊讶。这样可以产生最佳效果，并且图像清晰平衡。 没有CG那么模糊，又不像CI那样明亮的不自然。
+ */
 - (UIImage *)vImage:(UIImage *)image size:(CGSize)size
 {
     CGImageRef ref = [image CGImage];
