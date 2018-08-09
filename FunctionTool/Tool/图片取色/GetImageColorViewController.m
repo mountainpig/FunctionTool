@@ -8,6 +8,27 @@
 
 #import "GetImageColorViewController.h"
 
+
+
+@interface UIView (ColorOfPoint)
+@end
+
+@implementation UIView (ColorOfPoint)
+
+- (UIColor *)colorOfPoint:(CGPoint)point {
+    unsigned char pixel[4] = {0};
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(pixel, 1, 1, 8, 4, colorSpace, (CGBitmapInfo)kCGImageAlphaPremultipliedLast);
+    CGContextTranslateCTM(context, -point.x, -point.y);
+    [self.layer renderInContext:context];
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    UIColor *color = [UIColor colorWithRed:pixel[0]/255.0 green:pixel[1]/255.0 blue:pixel[2]/255.0 alpha:pixel[3]/255.0];
+    return color;
+}
+@end
+
+
 @protocol TouchImageViewDelegate <NSObject>
 - (void)touchPoint:(CGPoint)point;
 @end
@@ -19,12 +40,10 @@
 @implementation TouchImageView
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    //    [[touches anyObject] locationInView:self];
     [self.delegate touchPoint:[[touches anyObject] locationInView:self]];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    [[touches anyObject] locationInView:self];
     [self.delegate touchPoint:[[touches anyObject] locationInView:self]];
 }
 @end
@@ -33,7 +52,10 @@
 {
     UIImage *_image;
     unsigned char* _data;
-    UIView *_colorView;
+    UIView *_imageColorView;
+    UIView *_viewColorView;
+    
+    TouchImageView *_imageView;
 }
 @end
 
@@ -48,20 +70,25 @@
     [self getDataWithImage:image];
     
     TouchImageView *imageView = [[TouchImageView alloc] initWithFrame:CGRectMake(0, 84, 299, 400)];
+    _imageView = imageView;
     imageView.delegate = self;
     imageView.userInteractionEnabled = YES;
     imageView.image = image;
 //    imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imageView];
     
-    _colorView = [[UIView alloc] initWithFrame:CGRectMake(0, 484, 300, 50)];
-    [self.view addSubview:_colorView];
+    _imageColorView = [[UIView alloc] initWithFrame:CGRectMake(0, 484, 140, 50)];
+    [self.view addSubview:_imageColorView];
+    
+    _viewColorView = [[UIView alloc] initWithFrame:CGRectMake(150, 484, 140, 50)];
+    [self.view addSubview:_viewColorView];
 }
 
 
 - (void)touchPoint:(CGPoint)point
 {
-    _colorView.backgroundColor = [self image:_image point:point];
+    _imageColorView.backgroundColor = [self image:_image point:point];
+    _viewColorView.backgroundColor = [_imageView colorOfPoint:point];
     //391 * 558
 }
 
