@@ -112,6 +112,15 @@
     CGImageRef ref = [image CGImage];
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(ref);
     CGContextRef context = CGBitmapContextCreate(NULL, size.width, size.height, CGImageGetBitsPerComponent(ref), CGImageGetBytesPerRow(ref), colorSpace, CGImageGetBitmapInfo(ref));
+    /*
+     data: 创建BitmapContext所需的内存空间，由malloc创建
+     　width: 图片的宽度
+     　height: 图片的高度
+     　bitsPerComponent: data中的每个数据所占的字节数
+     　bytesPerRow: 图片每行的位数 = 图片列数＊4(因为每个点有4个通道)
+     　space: 颜色区间
+     　bitmapInfo: bitmap类型，一般选择PremultipliedFirst(ARGB)
+     */
     CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
     CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
     CGContextDrawImage(context, rect, ref);

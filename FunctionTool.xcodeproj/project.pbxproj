@@ -15,14 +15,15 @@
 		1D19A3E42117F3F200900E3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A3E32117F3F200900E3A /* main.m */; };
 		1D19A3EE2117F3F200900E3A /* FunctionToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A3ED2117F3F200900E3A /* FunctionToolTests.m */; };
 		1D19A3F92117F3F200900E3A /* FunctionToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A3F82117F3F200900E3A /* FunctionToolUITests.m */; };
-		1D19A4092117F56700900E3A /* MusicWordsAninationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A4082117F56700900E3A /* MusicWordsAninationViewController.m */; };
 		1D19A4102117F6EB00900E3A /* PinyinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A40F2117F6EB00900E3A /* PinyinViewController.m */; };
 		1D19A4122117F70900900E3A /* pinyin.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A4112117F70800900E3A /* pinyin.plist */; };
-		1D19A41821197F1200900E3A /* CAReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */; };
 		1D19A429211AFBDB00900E3A /* ImageSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D19A426211AFBDB00900E3A /* ImageSizeViewController.m */; };
 		1D19A42A211AFBDB00900E3A /* jpeg_size.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A427211AFBDB00900E3A /* jpeg_size.png */; };
 		1D19A42B211AFBDB00900E3A /* png_size.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A428211AFBDB00900E3A /* png_size.png */; };
 		1D19A42F211AFD0200900E3A /* ttttt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19A42E211AFD0200900E3A /* ttttt.png */; };
+		1D9E93DA211BD6610036B443 /* CAReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93D6211BD6610036B443 /* CAReplicatorLayerViewController.m */; };
+		1D9E93DB211BD6610036B443 /* MusicWordsAninationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93D9211BD6610036B443 /* MusicWordsAninationViewController.m */; };
+		1D9E93DF211BD6C70036B443 /* GetImageColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,18 +60,20 @@
 		1D19A3F42117F3F200900E3A /* FunctionToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D19A3F82117F3F200900E3A /* FunctionToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionToolUITests.m; sourceTree = "<group>"; };
 		1D19A3FA2117F3F200900E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D19A4072117F56700900E3A /* MusicWordsAninationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicWordsAninationViewController.h; sourceTree = "<group>"; };
-		1D19A4082117F56700900E3A /* MusicWordsAninationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicWordsAninationViewController.m; sourceTree = "<group>"; };
 		1D19A40E2117F6EB00900E3A /* PinyinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinViewController.h; sourceTree = "<group>"; };
 		1D19A40F2117F6EB00900E3A /* PinyinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinViewController.m; sourceTree = "<group>"; };
 		1D19A4112117F70800900E3A /* pinyin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pinyin.plist; sourceTree = "<group>"; };
-		1D19A41621197F1200900E3A /* CAReplicatorLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerViewController.h; sourceTree = "<group>"; };
-		1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerViewController.m; sourceTree = "<group>"; };
 		1D19A425211AFBDB00900E3A /* ImageSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSizeViewController.h; sourceTree = "<group>"; };
 		1D19A426211AFBDB00900E3A /* ImageSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSizeViewController.m; sourceTree = "<group>"; };
 		1D19A427211AFBDB00900E3A /* jpeg_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jpeg_size.png; sourceTree = "<group>"; };
 		1D19A428211AFBDB00900E3A /* png_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png_size.png; sourceTree = "<group>"; };
 		1D19A42E211AFD0200900E3A /* ttttt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ttttt.png; sourceTree = "<group>"; };
+		1D9E93D5211BD6610036B443 /* CAReplicatorLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerViewController.h; sourceTree = "<group>"; };
+		1D9E93D6211BD6610036B443 /* CAReplicatorLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerViewController.m; sourceTree = "<group>"; };
+		1D9E93D8211BD6610036B443 /* MusicWordsAninationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWordsAninationViewController.h; sourceTree = "<group>"; };
+		1D9E93D9211BD6610036B443 /* MusicWordsAninationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWordsAninationViewController.m; sourceTree = "<group>"; };
+		1D9E93DD211BD6C70036B443 /* GetImageColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetImageColorViewController.h; sourceTree = "<group>"; };
+		1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetImageColorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,12 +159,11 @@
 		1D19A4062117F54000900E3A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				1D19A4072117F56700900E3A /* MusicWordsAninationViewController.h */,
-				1D19A4082117F56700900E3A /* MusicWordsAninationViewController.m */,
+				1D9E93D7211BD6610036B443 /* 歌词滚动 */,
+				1D9E93D4211BD6610036B443 /* 转菊花 */,
 				1D19A40D2117F6EB00900E3A /* Pinyin */,
-				1D19A41621197F1200900E3A /* CAReplicatorLayerViewController.h */,
-				1D19A41721197F1200900E3A /* CAReplicatorLayerViewController.m */,
 				1D19A424211AFBDB00900E3A /* ImageSize */,
+				1D9E93DC211BD69E0036B443 /* 图片取色 */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -186,6 +188,33 @@
 				1D19A42E211AFD0200900E3A /* ttttt.png */,
 			);
 			path = ImageSize;
+			sourceTree = "<group>";
+		};
+		1D9E93D4211BD6610036B443 /* 转菊花 */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E93D5211BD6610036B443 /* CAReplicatorLayerViewController.h */,
+				1D9E93D6211BD6610036B443 /* CAReplicatorLayerViewController.m */,
+			);
+			path = "转菊花";
+			sourceTree = "<group>";
+		};
+		1D9E93D7211BD6610036B443 /* 歌词滚动 */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E93D8211BD6610036B443 /* MusicWordsAninationViewController.h */,
+				1D9E93D9211BD6610036B443 /* MusicWordsAninationViewController.m */,
+			);
+			path = "歌词滚动";
+			sourceTree = "<group>";
+		};
+		1D9E93DC211BD69E0036B443 /* 图片取色 */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E93DD211BD6C70036B443 /* GetImageColorViewController.h */,
+				1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */,
+			);
+			path = "图片取色";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,13 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9E93DB211BD6610036B443 /* MusicWordsAninationViewController.m in Sources */,
+				1D9E93DF211BD6C70036B443 /* GetImageColorViewController.m in Sources */,
 				1D19A3D92117F3F100900E3A /* ViewController.m in Sources */,
 				1D19A3E42117F3F200900E3A /* main.m in Sources */,
 				1D19A429211AFBDB00900E3A /* ImageSizeViewController.m in Sources */,
 				1D19A4102117F6EB00900E3A /* PinyinViewController.m in Sources */,
-				1D19A4092117F56700900E3A /* MusicWordsAninationViewController.m in Sources */,
 				1D19A3D62117F3F100900E3A /* AppDelegate.m in Sources */,
-				1D19A41821197F1200900E3A /* CAReplicatorLayerViewController.m in Sources */,
+				1D9E93DA211BD6610036B443 /* CAReplicatorLayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
