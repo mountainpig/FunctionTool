@@ -38,9 +38,10 @@
 
 - (void)addArrow
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 100, 30, 50)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 100, 50, 50)];
     [self.view addSubview:imageView];
-    imageView.image = [self arrowImageWithSize:CGSizeMake(30, 50) direction:ArrowDirectionRight lineWith:4 color:[UIColor redColor]];
+    imageView.image = [self arrowImageWithSize:CGSizeMake(50, 50) direction:ArrowDirectionRight lineWith:10
+                                         color:[UIColor redColor]];
 }
 
 
@@ -140,31 +141,31 @@ typedef NS_ENUM(NSUInteger, ArrowDirection) {
     switch (direction) {
         case ArrowDirectionRight:
         {
-            firstPoint = CGPointZero;
-            midPoint = CGPointMake(size.width, size.height/2);
-            endPoint = CGPointMake(0, size.height);
+            firstPoint = CGPointMake(lineWith/2, lineWith/2);
+            midPoint = CGPointMake(size.width - lineWith/2, size.height/2);
+            endPoint = CGPointMake(lineWith/2, size.height - lineWith/2);
         }
             break;
         case ArrowDirectionLeft:
         {
-            firstPoint = CGPointMake(size.width, 0);
-            midPoint = CGPointMake(0, size.height/2);
-            endPoint = CGPointMake(size.width, size.height);
+            firstPoint = CGPointMake(size.width - lineWith/2, lineWith/2);
+            midPoint = CGPointMake(lineWith/2, size.height/2);
+            endPoint = CGPointMake(size.width - lineWith/2, size.height - lineWith/2);
         }
             
             break;
         case ArrowDirectionTop:
         {
-            firstPoint = CGPointMake(0, size.height);
-            midPoint = CGPointMake(size.width/2, 0);
-            endPoint = CGPointMake(size.width, size.height);
+            firstPoint = CGPointMake(lineWith/2, size.height - lineWith/2);
+            midPoint = CGPointMake(size.width/2, lineWith/2);
+            endPoint = CGPointMake(size.width - lineWith/2, size.height - lineWith/2);
         }
             break;
         case ArrowDirectionBottom:
         {
-            firstPoint = CGPointMake(0, 0);
-            midPoint = CGPointMake(size.width/2, size.height);
-            endPoint = CGPointMake(size.width, 0);
+            firstPoint = CGPointMake(lineWith/2, lineWith/2);
+            midPoint = CGPointMake(size.width/2, size.height - lineWith/2);
+            endPoint = CGPointMake(size.width - lineWith/2, lineWith/2);
         }
             break;
             
@@ -174,7 +175,7 @@ typedef NS_ENUM(NSUInteger, ArrowDirection) {
     
     [path moveToPoint:firstPoint];
     [path addLineToPoint:midPoint];
-//    [path moveToPoint:midPoint];
+    [path moveToPoint:midPoint];
     [path addLineToPoint:endPoint];
     shapeLayer.path = path.CGPath;
     
