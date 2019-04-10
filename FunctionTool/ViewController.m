@@ -26,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _listArray = @[@"歌词滚动",@"汉字转拼音",@"转菊花",@"5种图片压缩方法",@"图片取色器",@"抠路径"];
+    _listArray = @[@"歌词滚动",@"汉字转拼音",@"转菊花",@"5种图片压缩方法",@"图片取色器",@"绘图"];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.delegate = self;

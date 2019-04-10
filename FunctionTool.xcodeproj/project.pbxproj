@@ -166,7 +166,7 @@
 		1D19A4062117F54000900E3A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				2678295A225DC34900071A7F /* 扣路径 */,
+				2678295A225DC34900071A7F /* 绘图 */,
 				1D9E93D7211BD6610036B443 /* 歌词滚动 */,
 				1D9E93D4211BD6610036B443 /* 转菊花 */,
 				1D19A40D2117F6EB00900E3A /* Pinyin */,
@@ -225,7 +225,7 @@
 			path = "图片取色";
 			sourceTree = "<group>";
 		};
-		2678295A225DC34900071A7F /* 扣路径 */ = {
+		2678295A225DC34900071A7F /* 绘图 */ = {
 			isa = PBXGroup;
 			children = (
 				2678295E225DC48600071A7F /* PathViewController.h */,
@@ -233,7 +233,7 @@
 				26782961225DC5FF00071A7F /* base.png */,
 				26782962225DC5FF00071A7F /* red.png */,
 			);
-			path = "扣路径";
+			path = "绘图";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
