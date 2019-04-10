@@ -12,6 +12,7 @@
 #import "CAReplicatorLayerViewController.h"
 #import "ImageSizeViewController.h"
 #import "GetImageColorViewController.h"
+#import "PathViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -25,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _listArray = @[@"歌词滚动",@"汉字转拼音",@"转菊花",@"5种图片压缩方法",@"图片取色器"];
+    _listArray = @[@"歌词滚动",@"汉字转拼音",@"转菊花",@"5种图片压缩方法",@"图片取色器",@"抠路径"];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.delegate = self;
@@ -66,6 +67,9 @@
             break;
         case 4:
             [self.navigationController pushViewController:GetImageColorViewController.new animated:YES];
+            break;
+        case 5:
+            [self.navigationController pushViewController:PathViewController.new animated:YES];
             break;
         default:
             break;

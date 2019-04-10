@@ -24,6 +24,9 @@
 		1D9E93DA211BD6610036B443 /* CAReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93D6211BD6610036B443 /* CAReplicatorLayerViewController.m */; };
 		1D9E93DB211BD6610036B443 /* MusicWordsAninationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93D9211BD6610036B443 /* MusicWordsAninationViewController.m */; };
 		1D9E93DF211BD6C70036B443 /* GetImageColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */; };
+		26782960225DC48600071A7F /* PathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2678295F225DC48600071A7F /* PathViewController.m */; };
+		26782963225DC5FF00071A7F /* base.png in Resources */ = {isa = PBXBuildFile; fileRef = 26782961225DC5FF00071A7F /* base.png */; };
+		26782964225DC5FF00071A7F /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 26782962225DC5FF00071A7F /* red.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,10 @@
 		1D9E93D9211BD6610036B443 /* MusicWordsAninationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWordsAninationViewController.m; sourceTree = "<group>"; };
 		1D9E93DD211BD6C70036B443 /* GetImageColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetImageColorViewController.h; sourceTree = "<group>"; };
 		1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetImageColorViewController.m; sourceTree = "<group>"; };
+		2678295E225DC48600071A7F /* PathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathViewController.h; sourceTree = "<group>"; };
+		2678295F225DC48600071A7F /* PathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathViewController.m; sourceTree = "<group>"; };
+		26782961225DC5FF00071A7F /* base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base.png; sourceTree = "<group>"; };
+		26782962225DC5FF00071A7F /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +166,7 @@
 		1D19A4062117F54000900E3A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				2678295A225DC34900071A7F /* 扣路径 */,
 				1D9E93D7211BD6610036B443 /* 歌词滚动 */,
 				1D9E93D4211BD6610036B443 /* 转菊花 */,
 				1D19A40D2117F6EB00900E3A /* Pinyin */,
@@ -215,6 +223,17 @@
 				1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */,
 			);
 			path = "图片取色";
+			sourceTree = "<group>";
+		};
+		2678295A225DC34900071A7F /* 扣路径 */ = {
+			isa = PBXGroup;
+			children = (
+				2678295E225DC48600071A7F /* PathViewController.h */,
+				2678295F225DC48600071A7F /* PathViewController.m */,
+				26782961225DC5FF00071A7F /* base.png */,
+				26782962225DC5FF00071A7F /* red.png */,
+			);
+			path = "扣路径";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,10 +341,12 @@
 			files = (
 				1D19A42F211AFD0200900E3A /* ttttt.png in Resources */,
 				1D19A3E12117F3F200900E3A /* LaunchScreen.storyboard in Resources */,
+				26782964225DC5FF00071A7F /* red.png in Resources */,
 				1D19A42A211AFBDB00900E3A /* jpeg_size.png in Resources */,
 				1D19A42B211AFBDB00900E3A /* png_size.png in Resources */,
 				1D19A4122117F70900900E3A /* pinyin.plist in Resources */,
 				1D19A3DE2117F3F200900E3A /* Assets.xcassets in Resources */,
+				26782963225DC5FF00071A7F /* base.png in Resources */,
 				1D19A3DC2117F3F100900E3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +375,7 @@
 				1D9E93DB211BD6610036B443 /* MusicWordsAninationViewController.m in Sources */,
 				1D9E93DF211BD6C70036B443 /* GetImageColorViewController.m in Sources */,
 				1D19A3D92117F3F100900E3A /* ViewController.m in Sources */,
+				26782960225DC48600071A7F /* PathViewController.m in Sources */,
 				1D19A3E42117F3F200900E3A /* main.m in Sources */,
 				1D19A429211AFBDB00900E3A /* ImageSizeViewController.m in Sources */,
 				1D19A4102117F6EB00900E3A /* PinyinViewController.m in Sources */,
