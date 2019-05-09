@@ -29,7 +29,7 @@
 {
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 300, 200, 200)];
     [self.view addSubview:imageView];
-    imageView.image = [self mergeBaseImage:[UIImage imageNamed:@"base"] baseRect:imageView.bounds stickerImage:[self closeImageWithSize:CGSizeMake(50, 50) lineWith:1.5 color:[UIColor greenColor]] stickerRect:CGRectMake(100, 50, 50, 50) stickerTransform:CGAffineTransformMakeRotation(M_PI/4)];
+    imageView.image = [self mergeBaseImage:[UIImage imageNamed:@"base"] baseRect:imageView.bounds stickerImage:[self closeImageWithSize:CGSizeMake(50, 50) lineWith:1.5 color:[UIColor greenColor]] stickerRect:CGRectMake(100, 50, 50, 50) stickerTransform:CGAffineTransformMakeRotation(M_PI/5)];
     UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(100, 50, 50, 50)];
     testView.layer.borderColor = [UIColor blackColor].CGColor;
     testView.layer.borderWidth = 1;

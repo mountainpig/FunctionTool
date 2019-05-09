@@ -24,6 +24,10 @@
 		1D9E93DA211BD6610036B443 /* CAReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93D6211BD6610036B443 /* CAReplicatorLayerViewController.m */; };
 		1D9E93DB211BD6610036B443 /* MusicWordsAninationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93D9211BD6610036B443 /* MusicWordsAninationViewController.m */; };
 		1D9E93DF211BD6C70036B443 /* GetImageColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */; };
+		260E02FF2284033300B7EFFF /* MBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E02FE2284033300B7EFFF /* MBViewController.m */; };
+		260E03022284034600B7EFFF /* DustEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E03012284034600B7EFFF /* DustEffectView.m */; };
+		260E03052284035100B7EFFF /* thanos_snap.png in Resources */ = {isa = PBXBuildFile; fileRef = 260E03032284035100B7EFFF /* thanos_snap.png */; };
+		260E03062284035100B7EFFF /* home_activity_prize.png in Resources */ = {isa = PBXBuildFile; fileRef = 260E03042284035100B7EFFF /* home_activity_prize.png */; };
 		26782960225DC48600071A7F /* PathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2678295F225DC48600071A7F /* PathViewController.m */; };
 		26782963225DC5FF00071A7F /* base.png in Resources */ = {isa = PBXBuildFile; fileRef = 26782961225DC5FF00071A7F /* base.png */; };
 		26782964225DC5FF00071A7F /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 26782962225DC5FF00071A7F /* red.png */; };
@@ -77,6 +81,12 @@
 		1D9E93D9211BD6610036B443 /* MusicWordsAninationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWordsAninationViewController.m; sourceTree = "<group>"; };
 		1D9E93DD211BD6C70036B443 /* GetImageColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetImageColorViewController.h; sourceTree = "<group>"; };
 		1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetImageColorViewController.m; sourceTree = "<group>"; };
+		260E02FD2284033300B7EFFF /* MBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBViewController.h; sourceTree = "<group>"; };
+		260E02FE2284033300B7EFFF /* MBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBViewController.m; sourceTree = "<group>"; };
+		260E03002284034600B7EFFF /* DustEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DustEffectView.h; sourceTree = "<group>"; };
+		260E03012284034600B7EFFF /* DustEffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DustEffectView.m; sourceTree = "<group>"; };
+		260E03032284035100B7EFFF /* thanos_snap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thanos_snap.png; sourceTree = "<group>"; };
+		260E03042284035100B7EFFF /* home_activity_prize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_activity_prize.png; sourceTree = "<group>"; };
 		2678295E225DC48600071A7F /* PathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathViewController.h; sourceTree = "<group>"; };
 		2678295F225DC48600071A7F /* PathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathViewController.m; sourceTree = "<group>"; };
 		26782961225DC5FF00071A7F /* base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base.png; sourceTree = "<group>"; };
@@ -166,6 +176,7 @@
 		1D19A4062117F54000900E3A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				260E02FC2284032300B7EFFF /* 灭霸 */,
 				2678295A225DC34900071A7F /* 绘图 */,
 				1D9E93D7211BD6610036B443 /* 歌词滚动 */,
 				1D9E93D4211BD6610036B443 /* 转菊花 */,
@@ -223,6 +234,19 @@
 				1D9E93DE211BD6C70036B443 /* GetImageColorViewController.m */,
 			);
 			path = "图片取色";
+			sourceTree = "<group>";
+		};
+		260E02FC2284032300B7EFFF /* 灭霸 */ = {
+			isa = PBXGroup;
+			children = (
+				260E02FD2284033300B7EFFF /* MBViewController.h */,
+				260E02FE2284033300B7EFFF /* MBViewController.m */,
+				260E03042284035100B7EFFF /* home_activity_prize.png */,
+				260E03032284035100B7EFFF /* thanos_snap.png */,
+				260E03002284034600B7EFFF /* DustEffectView.h */,
+				260E03012284034600B7EFFF /* DustEffectView.m */,
+			);
+			path = "灭霸";
 			sourceTree = "<group>";
 		};
 		2678295A225DC34900071A7F /* 绘图 */ = {
@@ -342,11 +366,13 @@
 				1D19A42F211AFD0200900E3A /* ttttt.png in Resources */,
 				1D19A3E12117F3F200900E3A /* LaunchScreen.storyboard in Resources */,
 				26782964225DC5FF00071A7F /* red.png in Resources */,
+				260E03062284035100B7EFFF /* home_activity_prize.png in Resources */,
 				1D19A42A211AFBDB00900E3A /* jpeg_size.png in Resources */,
 				1D19A42B211AFBDB00900E3A /* png_size.png in Resources */,
 				1D19A4122117F70900900E3A /* pinyin.plist in Resources */,
 				1D19A3DE2117F3F200900E3A /* Assets.xcassets in Resources */,
 				26782963225DC5FF00071A7F /* base.png in Resources */,
+				260E03052284035100B7EFFF /* thanos_snap.png in Resources */,
 				1D19A3DC2117F3F100900E3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,9 +403,11 @@
 				1D19A3D92117F3F100900E3A /* ViewController.m in Sources */,
 				26782960225DC48600071A7F /* PathViewController.m in Sources */,
 				1D19A3E42117F3F200900E3A /* main.m in Sources */,
+				260E02FF2284033300B7EFFF /* MBViewController.m in Sources */,
 				1D19A429211AFBDB00900E3A /* ImageSizeViewController.m in Sources */,
 				1D19A4102117F6EB00900E3A /* PinyinViewController.m in Sources */,
 				1D19A3D62117F3F100900E3A /* AppDelegate.m in Sources */,
+				260E03022284034600B7EFFF /* DustEffectView.m in Sources */,
 				1D9E93DA211BD6610036B443 /* CAReplicatorLayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
